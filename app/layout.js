@@ -32,6 +32,14 @@ export default function RootLayout({ children }) {
     <html lang="ar">
       <head>
         <link rel="icon" href="/favicon.png" />
+        <meta name="description" content="Salam 👋" />
+        <meta property="og:title" content="KhalidBI" />
+        <meta property="og:description" content="مرحبًا بك" />
+        <meta property="og:image" content="/home-og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://khalidbi.pro" />
+        <meta name="twitter:card" content="summary_large_image" />
       </head>
       <body className={`${inter.className} ${ibmPlexSansArabic.className} flex min-h-screen flex-col items-center justify-between`}>
         <Header />
