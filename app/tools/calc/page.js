@@ -50,7 +50,7 @@ const SalaryCalculatorPage = () => {
 
   return (
     <div className="dir-rtl">
-      <div className="container w-[600px] max-w-[90%] mx-auto px-4 py-8">
+      <div className="container md:w-[600px] max-w-[90%] mx-auto px-4 py-8">
         <div className="text-center mb-8">
           <h1 className="text-2xl font-bold">حاسبة النظام الجديد</h1>
         </div>
@@ -63,7 +63,7 @@ const SalaryCalculatorPage = () => {
                 type="text"
                 value={basicSalary}
                 onChange={(e) => handleInputChange(e, setBasicSalary)}
-                className="mt-1 text-black block w-full py-2 border-b-2 border-t-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-2xl"
+                className="mt-1 text-black block w-full py-2 border-b-2 border-t-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-2xl"
               />
             </div>
             <div className="flex flex-row pt-4">

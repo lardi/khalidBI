@@ -22,7 +22,7 @@ const SalaryResultModal = ({ results, onClose, isClosing }) => {
   if (!results) return null;
 
   return (
-    <div id="modal-overlay" className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div id="modal-overlay" className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4">
       <div className={`${isClosing ? 'modal-slide-fade-out' : 'modal-slide-fade-in'} bg-white p-6 rounded-3xl shadow-lg max-w-lg mx-auto relative modal-container w-[400px] max-w-[80%]`}>
         <button className="absolute top-2 right-2 text-white text-3xl mr-3 hover:text-gray-200" onClick={onClose}>
           &times;
