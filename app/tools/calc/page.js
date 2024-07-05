@@ -61,6 +61,8 @@ const SalaryCalculatorPage = () => {
               <input
                 id="basicSalary"
                 type="text"
+                inputMode="numeric"
+                pattern="[0-9]*"
                 value={basicSalary}
                 onChange={(e) => handleInputChange(e, setBasicSalary)}
                 className="mt-1 text-black block w-full py-2 border-b-2 border-t-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-2xl"
@@ -72,6 +74,8 @@ const SalaryCalculatorPage = () => {
                 <input
                   id="housingAllowance"
                   type="text"
+                  inputMode="numeric"
+                  pattern="[0-9]*"
                   value={housingAllowance}
                   onChange={(e) => handleInputChange(e, setHousingAllowance)}
                   className="mt-1 text-black block w-full py-2 border-b-2 border-t-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
@@ -82,6 +86,8 @@ const SalaryCalculatorPage = () => {
                 <input
                   id="transportationAllowance"
                   type="text"
+                  inputMode="numeric"
+                  pattern="[0-9]*"
                   value={transportationAllowance}
                   onChange={(e) => handleInputChange(e, setTransportationAllowance)}
                   className="mt-1 text-black block w-full py-2 border-b-2 border-t-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
@@ -93,6 +99,8 @@ const SalaryCalculatorPage = () => {
               <input
                 id="otherAllowances"
                 type="text"
+                inputMode="numeric"
+                pattern="[0-9]*"
                 value={otherAllowances}
                 onChange={(e) => handleInputChange(e, setOtherAllowances)}
                 className="mt-1 text-black block w-full py-2 border-b-2 border-t-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
