@@ -7,10 +7,10 @@ import SalaryResultModal from '@/components/modals/SalaryResultModal';
 import '../../../styles/animations.css';
 
 const SalaryCalculatorPage = () => {
-  const [basicSalary, setBasicSalary] = useState("0");
-  const [housingAllowance, setHousingAllowance] = useState("0");
-  const [transportationAllowance, setTransportationAllowance] = useState("0");
-  const [otherAllowances, setOtherAllowances] = useState("0");
+  const [basicSalary, setBasicSalary] = useState("");
+  const [housingAllowance, setHousingAllowance] = useState("");
+  const [transportationAllowance, setTransportationAllowance] = useState("");
+  const [otherAllowances, setOtherAllowances] = useState("");
   const [results, setResults] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalClosing, setIsModalClosing] = useState(false);
