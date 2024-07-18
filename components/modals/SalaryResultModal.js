@@ -31,38 +31,56 @@ const SalaryResultModal = ({ results, onClose, isClosing }) => {
         <p className='bg-white text-black text-3xl font-semibold p-2 rounded-xl text-center w-[200px] mx-auto'>
           {formatNumber(results.newTotalCompensation)}
         </p>
-        <div className='flex flex-row w-full mt-6 border-violet-400 border-t pt-3'>
+        <div className='flex flex-row w-full mt-4 er-t pt-3'>
           <div className='w-1/2'>
-            <PiMoney className='text-violet-400' size={18} />
-            <p className='text-sm text-violet-300 my-1'>الراتب الأساسي</p>
+            <div className='flex items-center'>
+              <PiMoney className='text-violet-200 ml-1' size={15} />
+              <p className='text-xs text-violet-300 my-1'>الراتب الأساسي</p>
+            </div>
             <p>{formatNumber(results.newBasicSalary)}</p>
           </div>
           <div className='w-1/2'>
-            <FiHome className='text-violet-400' size={18}/>
-            <p className='text-sm text-violet-300 my-1'>بدل السكن</p>
+            <div className='flex items-center'>
+              <FiHome className='text-violet-200 ml-1' size={15}/>
+              <p className='text-xs text-violet-300 my-1'>بدل السكن</p>
+            </div>
             <p className='text-xl'>{formatNumber(results.newHousingAllowance)}</p>
           </div>
         </div>
-        <div className='flex flex-row w-full mt-6 border-violet-400 border-b pb-3'>
+        <div className='flex flex-row w-full mt-3 pb-3'>
           <div className='w-1/2'>
-            <MdOutlineDirectionsCarFilled className='text-violet-400' size={18} />
-            <p className='text-sm text-violet-300 my-1'>بدل النقل</p>
+            <div className='flex items-center'>
+              <MdOutlineDirectionsCarFilled className='text-violet-200 ml-1' size={15} />
+              <p className='text-xs text-violet-300 my-1'>بدل النقل</p>
+            </div>
             <p className='text-xl'>{formatNumber(results.newTransportationAllowance)}</p>
           </div>
           <div className='w-1/2'>
-            <RiBillLine className='text-violet-400' size={18}/>
-            <p className='text-sm text-violet-300 my-1'>بدلات أخرى</p>
+            <div className='flex items-center'>
+              <RiBillLine className='text-violet-200 ml-1' size={15}/>
+              <p className='text-xs text-violet-300 my-1'>بدلات أخرى</p>
+            </div>
             <p className='text-xl'>{formatNumber(results.newOtherAllowances)}</p>
           </div>
         </div>
-        <div className="mt-6 flex">
+        <div className="mt-1 flex">
+          <div className='w-2/5'>
+            <h3 className="text-xs text-violet-300 my-1">حسم التأمينات</h3>
+            <p className='text-xl text-right text-yellow-400'>- {formatNumber(results.insuranceDeduction)}</p>
+          </div>
+          <div className='w-3/5'>
+            <h3 className="text-sm mb-2 text-center ">الصافي بعد حسم التأمينات</h3>
+            <p className='text-xl text-center bg-white text-black font-bold rounded-xl p-2'>{formatNumber(results.netCompensation)}</p>
+          </div>
+        </div>
+        <div className="mt-7 flex border-1 bg-black bg-opacity-20 p-3 rounded-2xl">
           <div className='w-2/3'>
-            <h3 className="text-sm mb-2 text-center">الإجمالي القديم</h3>
-            <p className='text-xl text-center bg-gray-300 text-gray-600 rounded-xl mx-3'>{formatNumber(results.totalCompensation)}</p>
+            <h3 className="text-sm mb-2 text-right">الإجمالي القديم</h3>
+            <p className='text-xl text-center bg-gray-300 bg-opacity-10 text-gray-200 rounded-xl py-1 ml-2'>{formatNumber(results.totalCompensation)}</p>
           </div>
           <div className='w-1/3'>
-            <h3 className="text-sm mb-2 text-center">الفرق</h3>
-            <p className='text-xl text-center bg-yellow-400 text-black rounded-xl'>{formatNumber(results.difference)}</p>
+            <h3 className="text-sm mb-2 text-right">الفرق</h3>
+            <p className='text-xl text-center bg-yellow-400 bg-opacity-50 text-black rounded-xl py-1'>{formatNumber(results.difference)}</p>
           </div>
         </div>
       </div>
