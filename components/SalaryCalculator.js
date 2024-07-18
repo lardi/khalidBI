@@ -48,6 +48,10 @@ const SalaryCalculator = () => {
     }, 500); // Duration of the fade-out animation
   };
 
+  const isCalculateButtonEnabled = () => {
+    return parseNumber(basicSalary) >= 1000;
+  };
+
   return (
     <div className="dir-rtl">
       <div className="container md:w-[600px] max-w-[90%] mx-auto px-4 py-8">
@@ -109,7 +113,8 @@ const SalaryCalculator = () => {
             <div className="input-group flex justify-center">
               <button
                 onClick={handleCalculate}
-                className="py-2 px-7 bg-purple-600 hover:bg-purple-700 text-white rounded-3xl shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className={`py-2 px-7 rounded-3xl shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 ${isCalculateButtonEnabled() ? 'bg-purple-600 hover:bg-purple-700 text-white' : 'bg-gray-400 text-gray-200 cursor-not-allowed'}`}
+                disabled={!isCalculateButtonEnabled()}
               >
                 حساب الراتب
               </button>
