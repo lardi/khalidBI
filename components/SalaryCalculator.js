@@ -68,7 +68,7 @@ const SalaryCalculator = () => {
               <input
                 id="basicSalary"
                 type="text"
-
+                inputMode="decimal"
                 pattern="[0-9]*"
                 value={basicSalary}
                 onChange={(e) => handleInputChange(e, setBasicSalary)}
@@ -81,7 +81,7 @@ const SalaryCalculator = () => {
                 <input
                   id="housingAllowance"
                   type="text"
-  
+                  inputMode="decimal"
                   pattern="[0-9]*"
                   value={housingAllowance}
                   onChange={(e) => handleInputChange(e, setHousingAllowance)}
@@ -93,7 +93,7 @@ const SalaryCalculator = () => {
                 <input
                   id="transportationAllowance"
                   type="text"
-  
+                  inputMode="decimal"
                   pattern="[0-9]*"
                   value={transportationAllowance}
                   onChange={(e) => handleInputChange(e, setTransportationAllowance)}
@@ -106,7 +106,7 @@ const SalaryCalculator = () => {
               <input
                 id="otherAllowances"
                 type="text"
-
+                inputMode="decimal"
                 pattern="[0-9]*"
                 value={otherAllowances}
                 onChange={(e) => handleInputChange(e, setOtherAllowances)}
@@ -118,7 +118,7 @@ const SalaryCalculator = () => {
               <input
                 id="net"
                 type="text"
-
+                inputMode="decimal"
                 pattern="[0-9]*"
                 value={net}
                 onChange={(e) => handleInputChange(e, setNet)}
