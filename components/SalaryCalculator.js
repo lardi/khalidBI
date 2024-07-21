@@ -134,7 +134,7 @@ const SalaryCalculator = () => {
                 حساب الراتب
               </button>
             </div>
-            <p className='text-center text-gray-300 text-sm'>ver 1.0.2</p>
+            <p className='text-center text-gray-300 text-sm'>ver 1.1.0</p>
           </div>
         </div>
         {isModalOpen && <SalaryResultModal results={results} onClose={closeModal} isClosing={isModalClosing} />}
