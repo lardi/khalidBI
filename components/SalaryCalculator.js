@@ -1,3 +1,4 @@
+//components/SararyCalculator.js
 "use client";
 
 import { useState } from 'react';
@@ -11,6 +12,7 @@ const SalaryCalculator = () => {
   const [housingAllowance, setHousingAllowance] = useState("");
   const [transportationAllowance, setTransportationAllowance] = useState("");
   const [otherAllowances, setOtherAllowances] = useState("");
+  const [net, setNet] = useState(""); // New field for net salary
   const [results, setResults] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalClosing, setIsModalClosing] = useState(false);
@@ -34,7 +36,8 @@ const SalaryCalculator = () => {
       parseNumber(basicSalary),
       parseNumber(housingAllowance),
       parseNumber(transportationAllowance),
-      parseNumber(otherAllowances)
+      parseNumber(otherAllowances),
+      parseNumber(net) // Passing net salary to the calculation function
     );
     setResults(result);
     setIsModalOpen(true);
@@ -107,6 +110,18 @@ const SalaryCalculator = () => {
                 pattern="[0-9]*"
                 value={otherAllowances}
                 onChange={(e) => handleInputChange(e, setOtherAllowances)}
+                className="mt-1 text-black block w-full py-2 border-b-2 border-t-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+              />
+            </div>
+            <div className="input-group pt-4">
+              <label htmlFor="net" className="block text-gray-500 text-sm">صافي الراتب</label>
+              <input
+                id="net"
+                type="text"
+                inputMode="numeric"
+                pattern="[0-9]*"
+                value={net}
+                onChange={(e) => handleInputChange(e, setNet)}
                 className="mt-1 text-black block w-full py-2 border-b-2 border-t-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
               />
             </div>

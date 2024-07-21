@@ -2,7 +2,7 @@ import SalaryCalculator from '@/components/SalaryCalculator';
 
 export const metadata = {
   title: "KhalidBI | حاسبة النظام الجديد",
-  description: "حاسبة تساعدك عل يالتعرف على الراتب مع النظام الجديد وحسم التأمينات منه",
+  description: "حاسبة تساعدك على التعرف على الراتب في النظام الجديد وحسم التأمينات منه",
   openGraph: {
     title: 'KhalidBI',
     description: 'حاسبة النظام الجديد',
